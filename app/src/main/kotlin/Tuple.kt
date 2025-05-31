@@ -29,6 +29,10 @@ data class Tuple(
         return Tuple(x * d, y * d, z * d, w * d)
     }
 
+    operator fun times(other: Tuple): Tuple {
+        return Tuple(x * other.x, y * other.y, z * other.z, w * other.w)
+    }
+
     operator fun div(n: Number): Tuple {
         val d = n.toDouble()
         return Tuple(x / d, y / d, z / d, w / d)

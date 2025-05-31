@@ -7,3 +7,7 @@ fun vector(x: Number, y: Number, z: Number): Tuple {
 fun point(x: Number, y: Number, z: Number): Tuple {
     return Tuple(x, y, z, 1)
 }
+
+fun color(x: Number, y: Number, z: Number): Tuple {
+    return Tuple(x, y, z, 1)
+}
