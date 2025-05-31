@@ -9,5 +9,5 @@ fun point(x: Number, y: Number, z: Number): Tuple {
 }
 
 fun main() {
-    println(vector(1, 2, 3) + point(2, 3, 4))
+    println(vector(1, 2, 3) / 2)
 }
