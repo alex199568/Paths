@@ -35,4 +35,8 @@ data class Tuple(
     operator fun unaryMinus(): Tuple {
         return Tuple(-x, -y, -z, -w)
     }
+
+    infix fun dot(other: Tuple): Double {
+        return x * other.x + y * other.y + z * other.z + w * other.w
+    }
 }
