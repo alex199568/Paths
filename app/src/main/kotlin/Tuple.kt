@@ -13,4 +13,8 @@ data class Tuple(
         z.toDouble(),
         w.toDouble()
     )
+
+    operator fun plus(other: Tuple): Tuple {
+        return Tuple(x + other.x, y + other.y, z + other.z, w + other.w)
+    }
 }
