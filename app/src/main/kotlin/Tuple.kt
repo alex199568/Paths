@@ -1,5 +1,7 @@
 package com.app
 
+import kotlin.math.sqrt
+
 data class Tuple(
     val x: Double = 0.0,
     val y: Double = 0.0,
@@ -38,5 +40,25 @@ data class Tuple(
 
     infix fun dot(other: Tuple): Double {
         return x * other.x + y * other.y + z * other.z + w * other.w
+    }
+
+    infix fun cross(other: Tuple): Tuple {
+        return vector(
+            y * other.z - z * other.y,
+            z * other.x - x * other.z,
+            x * other.y - y * other.x
+        )
+    }
+
+    val squaredLength by lazy {
+        this dot this
+    }
+
+    val length by lazy {
+        sqrt(squaredLength)
+    }
+
+    val unit by lazy {
+        this / length
     }
 }
